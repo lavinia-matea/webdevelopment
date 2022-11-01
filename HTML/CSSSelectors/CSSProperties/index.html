@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Properties</title>
+    <style>
+      @font-face {
+        font-family: customFont;
+        src: url(kaushan-script/KaushanScript-Regular.otf);
+      }
+
+      p {
+        font-family: customFont;
+        font-size: 19px;
+        /*font-weight: bold;*/
+        /*font-weight: 600; */
+        /*text-transform: capitalize;*/
+        /*text-decoration: underline;*/
+      }
+
+      .lorem-ipsum {
+        /*font-weight: bold;*/
+        /*font-weight: 600; */
+        text-transform: capitalize;
+        /*text-decoration: underline;*/
+      }
+      .lorem-ipsum span {
+        text-decoration: underline;
+        font-style: oblique;
+      }
+
+      .text-shadow {
+        text-shadow: 30x 30x 30px #1100ff;
+      }
+
+      html {
+        font-size: 32px;
+      }
+      .css-units {
+        font-size: 16px;
+      }
+
+      .css-units span {
+        /* font-size: 2em; */
+        font-size: 2rem;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-right {
+        text-align: right;
+      }
+      .align-justify {
+        text-align: justify;
+      }
+
+      .overflow-default {
+        width: 300px;
+        over-flow: hidden;
+        white-space: nowrap;
+      }
+      .overflow-ellipsis {
+        width: 300px;
+        over-flow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      body {
+        background-image: url("images/animals.jpeg");
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      .color {
+        /* color: red; */
+        /*color:#ff00ff; */
+        /*color: rgb (100, 255, 100 ); */
+        color: hsl(100, 50%, 50%);
+        background-color: burlywood;
+        opacity: 0.5;
+      }
+
+      .background-color {
+        height: 100px;
+        background-color: red;
+      }
+
+      .background-image {
+        height: 1500px;
+        background-image: url("images/background.jpeg");
+        /*background-repeat: repeat-x; */
+        background-position: center;
+      }
+
+      .linear-gradient {
+        height: 300px;
+        background-image: linear-gradient(to right, green, blue);
+      }
+
+      .multiple-backgrounds {
+        height: 1000px;
+        background-image: url("images/animals.jpeg"),
+          url("images/background.jpeg");
+        background-size: 100px, 800px;
+        background-repeat: no-repeat;
+      }
+
+      .float-image {
+        height: 300px;
+        float: right;
+        border-radius: 50%;
+      }
+
+      .position-relative {
+        position: relative;
+        top: 30px;
+        left: 50px;
+      }
+      .position-relative {
+        position: fixed;
+        top: 30px;
+        left: 50px;
+      }
+
+      .position-absoulte-container {
+        position: relative;
+        height: 300px;
+        background-color: red;
+      }
+
+      .position-absoulte {
+        position: absolute;
+        top: 130px;
+        left: 50px;
+      }
+
+      .display-inline {
+        display: inline;
+      }
+
+      .display-none {
+        display: none;
+        /* display: inline;
+         visibility: hidden: */
+      }
+
+      .z-index-container {
+        position: relative;
+
+      }
+      .z-index {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1,
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Text properties</h1>
+    <p class="lorem-ipsum">
+      <span>Lorem ipsum, </span>dolor sit amet consectetur adipisicing elit.
+      Accusantium cumque itaque in ipsam fuga amet expedita aperiam. Sapiente
+      explicabo commodi ipsum ratione ipsa porro quidem quaerat magni soluta
+      dolor quasi error autem impedit reprehenderit at temporibus, doloribus
+      molestias sit est, cupiditate officia omnis esse quia fugit! Totam modi
+      saepe delectus porro maiores quod nisi soluta culpa incidunt? Doloribus
+      soluta accusantium aperiam voluptatem iusto, ad facilis veritatis
+      recusandae maxime quod. Accusantium doloremque nihil dicta. Eligendi
+      officiis vitae inventore laboriosam animi, quo, illo mollitia odit dolorum
+      officia suscipit quisquam fugiat veniam aliquam? Reiciendis voluptatum
+      incidunt ut et itaque libero autem earum iste sed repellendus, similique
+      maiores dolore! Obcaecati pariatur amet qui non alias minus molestias? Ad,
+      quis at porro recusandae officia voluptas incidunt dolores ratione
+      perspiciatis reprehenderit. Mollitia blanditiis voluptatum quo dolor
+      quaerat ipsum similique eligendi beatae nobis. Vitae cupiditate, iusto
+      suscipit quidem nihil illo consequatur aliquam quos natus cum, excepturi
+      voluptatibus hic vel dolores nemo repellendus amet et incidunt totam
+      ducimus? Deserunt architecto officiis blanditiis, officia optio nesciunt
+      alias impedit delectus beatae sunt accusamus porro, eaque cumque sit
+      nostrum illum adipisci quam tempora quaerat. Adipisci vel saepe sed modi
+      sapiente! Doloremque possimus nostrum, in maiores quia quas ipsum autem
+      asperiores vitae.
+    </p>
+    <p class="text-shadow">This is a text with shadow</p>
+    <p class="css-units">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <span>Debitis hic saepe ad eveniet consequuntur reprehenderit</span> quam
+      similique, enim voluptatum eius.
+    </p>
+    <div class="align-center">
+      <p>Align center</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque natus
+        cumque molestiae temporibus eos id autem laudantium ratione, minima
+        nostrum quisquam impedit voluptatum illo assumenda. Suscipit cumque
+        accusantium ipsum officiis, omnis deserunt unde, maxime saepe voluptatum
+        laborum necessitatibus quia amet culpa debitis nobis labore in iure!
+        Assumenda tempore, dolorem architecto ullam, minima molestias
+        perspiciatis labore nostrum maxime magnam modi cupiditate aut sapiente
+        vel, quis distinctio? Deleniti officia sit nihil vitae saepe vel numquam
+        eligendi non inventore, dignissimos quia corrupti corporis illo illum
+        cum fuga, ipsa optio velit nobis, fugit quaerat accusantium repellat.
+        Optio aliquam, velit aliquid perferendis harum facere maiores.
+      </p>
+    </div>
+    <div class="align-left">
+      <p>Align left</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque natus
+        cumque molestiae temporibus eos id autem laudantium ratione, minima
+        nostrum quisquam impedit voluptatum illo assumenda. Suscipit cumque
+        accusantium ipsum officiis, omnis deserunt unde, maxime saepe voluptatum
+        laborum necessitatibus quia amet culpa debitis nobis labore in iure!
+        Assumenda tempore, dolorem architecto ullam, minima molestias
+        perspiciatis labore nostrum maxime magnam modi cupiditate aut sapiente
+        vel, quis distinctio? Deleniti officia sit nihil vitae saepe vel numquam
+        eligendi non inventore, dignissimos quia corrupti corporis illo illum
+        cum fuga, ipsa optio velit nobis, fugit quaerat accusantium repellat.
+        Optio aliquam, velit aliquid perferendis harum facere maiores.
+      </p>
+    </div>
+    <div class="alight-right">
+      <p>Align right</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque natus
+        cumque molestiae temporibus eos id autem laudantium ratione, minima
+        nostrum quisquam impedit voluptatum illo assumenda. Suscipit cumque
+        accusantium ipsum officiis, omnis deserunt unde, maxime saepe voluptatum
+        laborum necessitatibus quia amet culpa debitis nobis labore in iure!
+        Assumenda tempore, dolorem architecto ullam, minima molestias
+        perspiciatis labore nostrum maxime magnam modi cupiditate aut sapiente
+        vel, quis distinctio? Deleniti officia sit nihil vitae saepe vel numquam
+        eligendi non inventore, dignissimos quia corrupti corporis illo illum
+        cum fuga, ipsa optio velit nobis, fugit quaerat accusantium repellat.
+        Optio aliquam, velit aliquid perferendis harum facere maiores.
+      </p>
+    </div>
+    <div class="align-justify">
+      <p>Align justify</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque natus
+        cumque molestiae temporibus eos id autem laudantium ratione, minima
+        nostrum quisquam impedit voluptatum illo assumenda. Suscipit cumque
+        accusantium ipsum officiis, omnis deserunt unde, maxime saepe voluptatum
+        laborum necessitatibus quia amet culpa debitis nobis labore in iure!
+        Assumenda tempore, dolorem architecto ullam, minima molestias
+        perspiciatis labore nostrum maxime magnam modi cupiditate aut sapiente
+        vel, quis distinctio? Deleniti officia sit nihil vitae saepe vel numquam
+        eligendi non inventore, dignissimos quia corrupti corporis illo illum
+        cum fuga, ipsa optio velit nobis, fugit quaerat accusantium repellat.
+        Optio aliquam, velit aliquid perferendis harum facere maiores.
+      </p>
+    </div>
+    <p class="overflow-default">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+      quisquam enim optio ipsum veritatis porro ipsam delectus ad asperiores
+      voluptas. Aut, totam, ullam eum ipsam tempora enim nihil hic consequuntur
+      quam eos ipsum dolores blanditiis quia dolore porro in vel veniam. A
+      asperiores quo accusantium qui sint. Aliquid, recusandae doloribus!
+    </p>
+    <p class="overflow-ellipsis">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+      commodi, reprehenderit praesentium vitae aliquid voluptatum! Laboriosam
+      veniam, dicta aliquam dolorum dignissimos provident id commodi officia
+      animi, libero distinctio quasi dolore voluptate deleniti! Porro, minus
+      incidunt? Accusantium iusto delectus in doloremque facilis pariatur vitae
+      incidunt consequuntur, ducimus laborum quasi nisi voluptatem.
+    </p>
+    <h1>Color and Background</h1>
+    <div class="color">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
+        reprehenderit, sequi accusantium optio voluptatem aspernatur! Libero ex
+        et quas molestiae?
+      </p>
+    </div>
+    <div class="background-color"></div>
+    <div class="background-image"></div>
+    <div class="linear-gradient"></div>
+    <div class="multiple-backgrounds"></div>
+    <h1>Floats</h1>
+    <p>
+      <img src="images/animals.jpeg" class="float-image" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, hic
+      nesciunt ab accusamus, mollitia velit expedita delectus deserunt dicta
+      dolores, aut reprehenderit tempore at? Voluptatum praesentium sequi quod
+      blanditiis ut officia optio! At obcaecati quos maxime aut ratione ducimus
+      nam adipisci reiciendis porro illum, harum distinctio neque molestiae.
+      Vitae, incidunt rerum. Explicabo molestiae veniam praesentium laudantium
+      esse eius culpa sapiente corporis quasi qui error numquam in, inventore
+      nisi doloremque cum doloribus eveniet facilis unde illum ullam recusandae.
+      Dolores quidem laboriosam sit excepturi, vero quas eaque error,
+      praesentium recusandae velit obcaecati! Natus necessitatibus vero soluta
+      eaque laborum, odit voluptatem exercitationem esse laudantium qui. Nulla
+      ut asperiores est ipsum eligendi quos! Nihil ut tenetur illo quaerat sequi
+      dolorum, sed nemo hic dolor esse maxime praesentium ad culpa quasi ab quo
+      eos consectetur, labore nesciunt ipsam eveniet. Obcaecati omnis
+      accusantium tenetur quibusdam laudantium, nemo exercitationem. Dolore
+      consequuntur dicta repellendus corrupti aliquam? Quia possimus natus totam
+      itaque ipsum aliquid reprehenderit quos neque. Numquam eos porro culpa
+      iusto deserunt corrupti cum perspiciatis nemo. Ad expedita nobis
+      provident, earum omnis, a iusto corrupti sint nostrum veritatis, nesciunt
+      molestias. Eos officia esse veritatis inventore! Id et quae officiis
+      cupiditate, optio aperiam consectetur, nulla non magni officia est?
+    </p>
+    <h1>Position</h1>
+    <p class="position-relative">Element with position relative</p>
+    <p class="position-fixed">Element with position fixed</p>
+    <div class="position-absolute-container">
+      <p class="position-absoulte">Element with position absoulte</p>
+    </div>
+    <h1>Display and Visibility</h1>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quod animi
+      ipsam eius tenetur facilis?
+      <p class="display-inline">Some other text inside</p>
+    </div>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quod animi
+      ipsam eius tenetur facilis?
+      <p class="display-none">Some other text inside</p>
+    </div>
+    <h1>The z-index Property</h1>
+    <img src="images/animals.jpeg" width="200px" class="z-index"/>
+    <div class="z-index-container">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque minima
+      est asperiores modi recusandae dignissimos natus earum neque, dolor,
+      laborum, officiis ad labore blanditiis ipsa. A aperiam voluptas aliquam id
+      quo laboriosam illum facere tenetur. Aliquid sequi vero eveniet accusamus
+      distinctio modi ut sunt, voluptatum reiciendis dicta, architecto est
+      asperiores dolorem nisi. Repudiandae labore sit nulla dignissimos libero!
+      Voluptas architecto quaerat autem, iure dolor qui enim voluptatum quae in
+      reprehenderit aspernatur explicabo accusamus inventore exercitationem
+      repudiandae blanditiis est dolores consectetur eaque. Cupiditate autem
+      repudiandae optio rerum, architecto asperiores quibusdam maiores quisquam
+      enim molestiae aliquam amet expedita itaque, sunt id alias.
+    </p>
+</div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Selectors</title>
+
+    <style>
+      /*p {
+        color: red;
+      }  */
+      /*#paragraphContainer {
+            color: red;
+        } */
+
+      /*.paragraphContainer {
+            color: aqua;
+        } */
+
+      /*#blueParagraph1, #blueParagraph2, #blueParagraph3 {
+            color: aqua;
+        }*/
+
+      /**{
+            margin: 0px;
+            padding: 0px;
+        } */
+
+      /*div ~ p {
+        color: green;
+      }*/
+
+      /*p[class*=attribute] {
+        color:red;
+
+      }*/
+
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: aqua;
+      }
+      a:hover {
+        color: yellow;
+      }
+      a:active {
+        color: violet;
+      }
+
+      .button {
+        background-color: orange;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        width: 300px;
+      }
+
+      .button:hover {
+        background-color: brown;
+        cursor: pointer;
+      }
+
+      .paragraph-element::first-line {
+        color: red;
+      }
+
+      q::before {
+        content: "<<";
+        color: goldenrod;
+      }
+
+      q::after {
+        content: "<<";
+        color: goldenrod;
+      }
+    </style>
+
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css"></link> -->
+  </head>
+  <body>
+    <h1>Inline styles</h1>
+    <p style="color: plum">This is a paragraph</p>
+    <hr />
+    <h1>Embedded styles</h1>
+    <p>This is a paragraph</p>
+    <hr />
+    <h1>External styles</h1>
+    <p>This is a paragraph</p>
+    <hr />
+    <h1>Simple Selectors</h1>
+    <div id="paragraphContainer" class="paragraph-container">
+      <p id="blueParagraph1">First paragraph</p>
+      <p id="blueParagraph2">Second paragraph</p>
+      <p>Third paragraph</p>
+      <p id="blueParagraph3">Fourth paragraph</p>
+    </div>
+    <p>Another paragraph</p>
+    <p>Another paragraph</p>
+    <p>Another paragraph</p>
+    <hr />
+    <h1>Combinators Selectors</h1>
+    <div>
+      <p>First Paragraph</p>
+      <p>Second Paragraph</p>
+      <section>
+        <p>Fourth Paragraph</p>
+      </section>
+    </div>
+    <p>Third Paragraph</p>
+    <hr />
+    <h1>Attribute selectors</h1>
+    <div>
+      <p class="attribute-smthg attribute attribute1">First paragraph</p>
+      <p class="attribute2 attribute">Second paragraph</p>
+      <p>Third paragraph</p>
+      <p class="attribute4">Fourth paragraph</p>
+    </div>
+    <hr />
+    <h1>Pseudo classes</h1>
+    <div>
+      <a href="https://www.google.com" target="_blank">Go to Google</a>
+      <div class="button">Click me</div>
+    </div>
+    <h1>Pseudo elements</h1>
+    <div>
+      <p class="paragraph-element">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos
+        doloribus consequatur quibusdam voluptatem excepturi voluptate vitae
+        vero? Labore blanditiis a fugit dolor et, eaque, aspernatur aut aliquid
+        doloremque cupiditate praesentium non, veritatis veniam saepe? Nemo
+        perferendis quaerat unde adipisci qui voluptate quasi voluptatum
+        dignissimos eligendi quo corrupti alias deleniti consectetur, ducimus
+        vitae? Tenetur qui quo quos? Reiciendis officiis ab consectetur porro
+        eius sunt obcaecati laborum, nam veritatis ratione nemo illo nihil,
+        nobis, ut suscipit soluta quas fugit voluptates velit sapiente? Sit,
+        enim, eos aut deleniti ullam ipsam quaerat animi minima assumenda
+        necessitatibus odio voluptates sint dolorum. Cum ipsum quidem ratione
+        quos natus libero tempora cumque id omnis maiores exercitationem maxime
+        earum ducimus aspernatur voluptatibus minima, nemo saepe est, sit
+        consequuntur dolores qui reprehenderit fugiat numquam. Molestias ipsum,
+        perferendis vero numquam eum dolorum libero minima vel placeat earum
+        voluptatem et pariatur corrupti excepturi vitae sit ipsam ut laboriosam
+        quisquam nesciunt. Est eos ad delectus eaque distinctio itaque
+        doloribus, dolorem illum aspernatur deleniti ab id! At deserunt
+        laudantium harum illo eveniet earum molestiae ea voluptatibus ipsum rem
+        necessitatibus corporis suscipit, eos consectetur non numquam
+        perferendis repudiandae. Labore, rem ratione esse illo aliquam atque
+        eligendi quos ipsa! Eius repudiandae reiciendis nisi nesciunt?
+      </p>
+      <q>Some quotes</q>, he said, <q>are better than none.</q>
+    </div>
+  </body>
+</html>
