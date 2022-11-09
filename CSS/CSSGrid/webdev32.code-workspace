@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "../../../webdev32"
+	},
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../HTML"
+	},
+	{
+		"path": "../../Wikipedia"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "CSS"
+  }
+}

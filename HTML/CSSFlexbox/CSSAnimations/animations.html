@@ -11,7 +11,33 @@
         animation-duration: 4s;
         /*animation-delay: 3s; */
         animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
         /*animation-iteration-count: infinite; */
+      }
+      
+      .animation-effects {
+        width: 100px;
+        height: 75px;
+        background-color: blue;
+        animation: moveX 7s infinite;
+        position: relative;
+
+      }
+
+      .linear {
+        animation-timing-function: linear;
+      }
+      .ease {
+        animation-timing-function: ease;
+      }
+      .ease-in {
+        animation-timing-function: ease-in;
+      }
+      .ease-out {
+        animation-timing-function: ease-out;
+      }
+      .ease-in-out {
+        animation-timing-function: ease-in-out;
       }
 
       @keyframes changeBackgroundColor {
@@ -28,10 +54,21 @@
         75% {background-color: black; left: 0px; top: 150px; }
         100% {background-color: black; left: 0px; top:0px; }
       }
+
+      @keyframes moveX {
+         0% {left: 0px; }
+         100% {left: 400px;}
+      }
     </style>
   </head>
   <body>
 <h1>Animations</h1>
 <div class="animation-container"></div>
+<hr>
+<div class="animation-effects linear">LINEAR</div>
+<div class="animation-effects ease">EASE</div>
+<div class="animation-effects ease-in">EASE IN</div>
+<div class="animation-effects ease-out">EASE OUT</div>
+<div class="animation-effects ease-in-out">EASE IN OUT</div>
   </body>
 </html>
