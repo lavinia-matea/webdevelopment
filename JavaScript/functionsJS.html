@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function sum(number1, number2) {
+        var sumResult = number1 + number2;
+        console.log(sumResult);
+      }
+
+      sum(765, 345);
+      sum(3, 4);
+      sum(4, 9);
+
+      var sayHelloAnonymous = function (name) {
+        console.log(name);
+      };
+
+      sayHelloAnonymous("Name");
+
+      (function () {
+        console.log("Used for initializing data");
+      })();
+
+      function logFullName(firstName, lastName) {
+        console.log(firstName + lastName);
+        firstName = ` NEW - ${firstName}`;
+
+        console.log(firstName);
+      }
+
+      var firstName = "Lavinia";
+      var lastName = "Matea";
+
+      logFullName(firstName, lastName);
+
+      console.log(firstName);
+
+      
+      function factorial(n) {
+        if (n < 0)
+        return 0;
+
+        if (n === 0 || n === 1) 
+        return 1;
+        
+        return n * factorial(n - 1);
+      }
+
+      console.log("------Factorial------");
+      console.log(factorial(0));
+      console.log(factorial(1));
+      console.log(factorial(5));
+      console.log(factorial(-5));
+
+      console.log("-----Most common JS Arrays Functions-----")
+      var numberArray = [5, 15, 1, 3, 4, 75, 25, 6, 7, 11, 6, 2, 100, 90, 76];
+
+      console.log(numberArray.toString());
+      console.log(numberArray.join(" - "));
+      console.log(numberArray.pop());
+      console.log(numberArray.toString());
+      console.log(numberArray.push());
+      console.log(numberArray.toString());
+
+      var numberArray1 = [1, 2, 3]
+      var numberArray2 = [4, 5]
+      var numberArray3 = [6, 7, 8]
+
+     console.log(numberArray.concat(numberArray2, numberArray3));
+
+     var alphabetArray = ["B", "X", "A", "D"];
+
+     console.log(alphabetArray.sort());
+     console.log(alphabetArray.reverse());
+
+     console.log(numberArray.sort(function(a, b) {return b - a;}));
+
+     function logSomething() {
+        console.log("logSomething");
+     }
+
+      //setTimeout(logSomething, 3000);
+      //setInterval(logSomething, 1000);
+
+      function logDateTime() {
+        console.log((new Date()).toLocaleTimeString());
+      }
+
+      // setInterval(logDateTime, 1000);
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

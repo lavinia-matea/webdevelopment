@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+          // console.log("Inside head");
+
+          //It's all right. Javascript is "not" that scary.
+        console.log("It's all right. Javascript is \"not\" that scary.");
+
+        var numberA = 33;
+        var numberB = '33';
+
+        console.log(numberA + numberB);
+
+        console.log(numberA == numberB)
+        console.log("Are equal? == ", numberA == numberB)
+        console.log("Are equal? === ", numberA === numberB)
+
+        console.log(typeof numberA);
+        console.log(typeof numberB);
+
+        var undefinedVariable;
+
+        console.log(undefinedVariable);
+        console.log(typeof undefinedVariable);
+
+        undefinedVariable = 30;
+        console.log(undefinedVariable);
+
+        undefinedVariable = null;
+        console.log(undefinedVariable);
+
+        var isEligible = numberA > 18;
+        console.log("IsEligible:",isEligible);
+
+        // var isNotEligible = !(isEligibile);
+        //var isNotEligible = !(numberA > 18);
+       // var isNotEligible = numberA <= 18;
+        var isNotEligible = !(numberA > 18);
+        console.log("IsNotEligible:",isNotEligible);
+
+        //var openParanthesis = !(numberA >18 || numberB =='34');
+        var openParenthesis = numberA <= 18 && numberB !='34';
+        console.log("OpenParenthesis:". openParenthesis);
+
+       console.log("-----16.11.2022-----");
+
+        //If a variable is array log "I'm an array", if a string log "I'm a string", if a number "I'm a number", if a boolean log "I'm a boolean"
+
+
+         var variableForTest = 2;
+// console.log(typeof variableForTest);
+//object not array
+
+
+      if (typeof variableForTest === "array") {
+            console.log("I'm an array");
+      } else if (typeof variableForTest ==="string") {
+      console.log("I'm a string");
+      }
+       else if(typeof variableForTest ==="boolean") {
+      console.log("I'm a boolean");
+      } else if (typeof variableForTest === "number") {
+         console.log("I'm a number")
+      }
+       
+      else {
+          console.log("I don't know your type");
+      }
+
+
+      switch (typeof variableForTest) {
+        case 'string': 
+        console.log("I'm a string");
+        break;
+        case 'number': 
+        console.log("I'm a number");
+        break;
+        case 'boolean': 
+        console.log("I'm a boolean");
+        break;
+        default:
+            console.log("I don't know your type");
+            break;
+
+      }
+
+       for (var i=0; i<5; i++) {
+       if ( i % 2 !==0) 
+       continue;
+
+         //console.log('Number $ {i} bla bla');
+
+          console.log("FOR -Number is: ", i);
+       }
+
+    var iWhile = 0;
+
+       while (iWhile < 5) {
+        console.log("WHILE -Number is: ", iWhile);
+        iWhile++;
+       }
+
+      var iWhile = 0;
+
+     do {
+      console.log("DO WHILE - Number is: " , iWhile);
+      iWhile++;
+     }
+     while (iWhile < 5);
+
+    </script>
+    <!-- <script src="js/demo.js"></script> -->
+  </head>
+  <body>
+    <!-- <script>
+    console.log("Inside body");
+</script>
+<script src="js/demo.js">
+
+</script> -->
+  </body>
+</html>

@@ -5,29 +5,33 @@
             .grid-container {
                 display: grid;
                 grid-template-areas:
-                'header header header header header header header header header header header header'
-                'banner banner banner banner banner banner banner banner banner banner banner banner'
-                'menuArea menuArea main main main main main main main main aside aside'
-                'menuArea menuArea main main main main main main main main main main '
-                'footer footer footer footer footer footer footer footer footer footer footer footer';
+                'headerArea headerArea headerArea'
+                'bannerArea bannerArea bannerArea'
+                'menuArea mainArea asideArea'
+                'menuArea mainArea asideArea '
+                'footerArea footerArea footerArea';
                 background-color: grey;
                 gap: 12px;
             }
 
             .header {
-                grid-area: header;
+                grid-area: headerArea;
             }
             .banner {
-                grid-area: banner;
+                grid-area: bannerArea;
             }
             .vertical-menu {
                 grid-area: menuArea;
             }
             .main-content {
-                grid-area: main;
+                grid-area: mainArea;
+            }
+
+            .aside-content  {
+                grid-area: asideArea;
             }
             .footer {
-                grid-area: footer;
+                grid-area: footerArea;
             }
 
         </style>
