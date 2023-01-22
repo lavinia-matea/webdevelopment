@@ -60,20 +60,80 @@ body {
   color: var(--text-color);
 }
 
-/* -- For Dark Mode --*/
-body.active {
-  --text-color: #fff;
-  --bg-color: #0f0c27;
+/* -- Toggle --*/
+
+
+
+.toggle {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 60px;
+  border-radius: 50px;
+  transition: .2s;
 }
 
-section {
-  padding: 50px 10%;
+.toggle i {
+  width: 50%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 1;
 }
 
-*::selection {
-  color: var(--bg-color);
-  background: var(--main-color);
+.toggle .ball {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  margin: 7.5px;
+  border-radius: 50%;
+  transition: .3s ease-out;
 }
+
+input {
+  display: none;
+}
+
+
+/*
+  -- Dark Mode --
+*/
+
+.dark {
+  background: #151d2a;
+}
+
+.dark .toggle {
+  background: #151d2a;
+  box-shadow: 3px 3px 3px #0e131b,
+              -3px -3px 3px #1c2739;
+}
+
+.dark .toggle .bx-sun {
+  color: #fafafa;
+}
+
+.dark .toggle .bxs-moon {
+  color: #151d2a;
+}
+
+.dark .toggle .ball {
+  background: #fafafa;
+  transform: translateX(60px);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* --Navigation bar --*/
 header {
   position: fixed;

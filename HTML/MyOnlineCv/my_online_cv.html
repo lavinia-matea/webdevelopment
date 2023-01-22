@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"crossorigin="anonymous">
 
     <link rel="stylesheet" href="./my_online_cv.css" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
         <!--JavaScript File -->
         <link rel="javascript" href="./my_online_cv.js" />
     <!--icon CDN link -->
@@ -26,9 +27,16 @@
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://kit.fontawesome.com/c33a7fbce2.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="light">
    
+
+      <input type="checkbox" id="toggle">
   
+      <label class="toggle" for="toggle">
+          <i class="bx bxs-sun"></i>
+          <i class="bx bxs-moon"></i>
+          <span class="ball"></span>
+      </label>
   
   
     <!-- Navigation Bar-->
@@ -45,10 +53,17 @@
         <a href='#services'>Hobbies</a> <a href='#contact'>Contact</a>    
           
 
-      
-      <!-- Dark Mode  Button-->
-      <div class="bx bx-moon" id="darkmode"></div>
+   
+    
+
     </header>
+   
+      <!-- Dark Mode  Button-->
+    <label class="toggle" for="toggle">
+      <i class="bx bxs-sun"></i>
+      <i class="bx bx-moon"></i>
+      <span class="ball"></span>
+    </label>
 
     <!-- Home Section-->
     <section class="home" id="home">
@@ -93,7 +108,7 @@
         <!-- Image-->
         
        
-        <!-- Text-->
+        <!-- About Text-->
         <div class="about-text">
           <p>
              A meticulous web developer with a passion for responsive website design and a firm believer in the mobile-first approach.
@@ -103,8 +118,7 @@
           
           <!-- Animated Bowls -->
           
-          <section class="bowls_section">
-            <div class="shadow"></div>
+          <section class="bowls_section"><div class="shadow"></div>
             <div class="bowl">
               <div class="liquid"></div>
 

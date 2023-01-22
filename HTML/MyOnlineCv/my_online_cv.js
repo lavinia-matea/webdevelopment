@@ -58,19 +58,19 @@ function addClass() {
 
 
 
-// Dark Mode
+// Light/Dark Mode
 
-let darkmode= document.querySelector('#darkmode');
+const body = document.querySelector("body");
+const toggle = document.querySelector("#toggle");
+const sunIcon = document.querySelector(".toggle .bxs-sun");
+const moonIcon = document.querySelector(".toggle .bx-moon");
 
-darkmode.onclick = () => {
-    if (darkmode.classList.contains('bx-moon')) {
-        darkmode.classList.replace('bx-moon', 'bx-sun');
-        document.body.classList.add('active');
-    }
-    else {
-        darkmode.classList.replace('bx-sun', 'bx-moon');
-        document.body.classList.remove('active');
-}
-}
+toggle.addEventListener("change", () => {
+    
+    body.classList.toggle("dark");
+    sunIcon.className = sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
+    moonIcon.className = moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
+
+});
 
 
