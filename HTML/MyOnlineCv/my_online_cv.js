@@ -30,6 +30,13 @@ wavesurfer.on('finish', function() {
     wavesurfer.stop();
 })
 
+// Text Typing Animation
+let typed = new Typed(".auto-type", {
+    strings: [ "Lavinia" ,"Coding", "Sleeping", "Eating"],
+    typeSpeed: 80,
+    backSpeed: 80,
+    loop: true
+  }); 
 
 
 let header = document.querySelector('header');
@@ -39,6 +46,17 @@ let navbar = document.querySelector('.navbar');
 menu.onclick = () => {
     navbar.classList.toggle('active');
 }
+
+// Contact Form
+function addClass() {
+    document.body.classList.add("sent");
+  }
+  
+  sendLetter.addEventListener("click", addClass);
+
+
+
+
 
 // Dark Mode
 
@@ -54,4 +72,5 @@ darkmode.onclick = () => {
         document.body.classList.remove('active');
 }
 }
+
 

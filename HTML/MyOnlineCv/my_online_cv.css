@@ -19,6 +19,7 @@
   --big-font: 3.2rem;
   --medium-font: 1.8rem;
   --p-font: 0.941rem;
+  scroll-behavior: smooth;
 }
 /* --- Music Player --- */
 
@@ -157,8 +158,7 @@ div#menubar > a:hover {
   width: 100%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr;
-  align-items: center;
+  grid-template-columns:1fr 1fr;
   gap: 0.5rem;
 }
 
@@ -169,23 +169,28 @@ div#menubar > a:hover {
   width: 70%;
   height: 70%;
 }
-.home-text span {
-  font-size: var(--medium-font);
-  font-weight: 400;
-  background-image: url(./images/lavi_crop\\(1\).png);
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 200px;
+
+/* Text Typing */
+.container1{ 
+  width: 85%;
+  
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 80px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
   font-weight: 600;
-  -webkit-font-smoothing: antialiased;
 }
 
+.container1 span{
+  color:#ff006c;
+}
 .home-text h2 {
+  display: flex;
+  justify-content:flex-start;
+}
+.home-text h3 {
   color: #ff006c;
   font-style: italic;
   font-size: 16px;
@@ -219,7 +224,7 @@ div#menubar > a:hover {
 
 .about-img img {
   width: 80%;
-  border-radius: rem;
+  border-radius: 40px;
 }
 
 .about-img img:hover {
@@ -233,20 +238,138 @@ div#menubar > a:hover {
   padding: 30px;
 }
 
-/* --- About Section Button ---*/
+/* --- Glowing Bowls Animation ---*/
 
-.btn {
-  display: inline-block;
+.bowls_section{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background: var(--main-color);
-  padding: 0.7rem 1.3rem;
-  border-radius: 0.5rem;
-  color: var(--text-color);
+  min-height: 25vh;
+  background: #121212;
+  border-radius: 20%;
+  width: 30vh;
 }
 
-.btn:hover {
-  background: var(--hover);
+.bowl{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: rgba(255,255,255, 0.1);
+  border-radius:  50%;
+  border: 8px solid transparent;
+  transform-origin: bottom center ;
+  animation: animate 5s linear infinite;
+
 }
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+     transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(0deg);
+  }
+}
+
+
+.bowl::before{
+content: '';
+position: absolute;
+top: -15px;
+left: 50%;
+transform: translateX(-50%);
+width: 40%;
+height: 30px;
+border: 15px solid #444;
+border-radius: 50%;
+box-shadow: 0 10px #222;
+
+}
+.bowl::after{
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 90px;
+  height: 40px;
+  background: rgba(255,255,255,0.05);
+}
+.liquid  {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #41c1fb;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  filter: drop-shadow(0 0 80px #41c1fb);
+  transform-origin: top center ;
+  animation: animateLiquid 5s linear infinite;
+}
+
+@keyframes animateLiquid {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.liquid::before{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 20px;
+  background: #1fa4e0;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 80px #41c1fb);
+
+}
+.shadow {
+  position: absolute;
+  top: calc(50% + 150px);
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+
+}
+
+
+
+
+
+
 /* ---Skills - Programs - */
 
 .programs {
@@ -275,6 +398,7 @@ div#menubar > a:hover {
 }
 
 .container .card {
+  
   border-radius: 30px;
   position: relative;
   width: 160px;
@@ -396,21 +520,21 @@ div#menubar > a:hover {
 /* --- Services Section ---*/
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 }
 .services-box {
   padding: 20px;
-  width: 260px;
+  width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border-radius: 0.5rem;
-  border-bottom: 2px solid black;
-  box-shadow: 0 2px 7px rgba(5, 209, 206, 0.25);
+  border-bottom:3px solid black;
+  box-shadow: 0 2px 7px #ff006c;
 }
 
 .services-box .bx {
@@ -429,10 +553,16 @@ div#menubar > a:hover {
   font-weight: 500;
 }
 
+.services-box  img{
+  width: 280px;
+  height: 200px;
+  border-radius: 10px;
+}
+
 /* --- Hover ---*/
 
 .services-box:hover {
-  background: #ebd918;
+  background: #ff006c;
 }
 .services-box:hover h3 {
   color: #fff;
@@ -469,48 +599,10 @@ div#menubar > a:hover {
 
 /* -- Contact Form -- */
 
-.contact-form {
-  display: grid;
-  place-items: center;
-  margin-top: 1rem;
-}
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  width: 650px;
-}
 
-form input,
-form textarea {
-  padding: 15px;
-  border-radius: 0.5rem;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #fbdeea;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
 
-form textarea {
-  resize: none;
-  height: 200px;
-}
-.contact-button {
-  width: 160px;
-  cursor: pointer;
-  background: var(--main-color);
-  color: #fff;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-left: 35%;
-}
 
-.contact-button:hover {
-  background: var(--hover);
-}
 /* ---- Footer ---- */
 
 .footer_section {
@@ -525,6 +617,15 @@ form textarea {
   align-items: center;
   overflow: hidden;
   background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+
+.follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: overflow ;
+  background: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+  font-size: 20px;
 }
 
 .footer_section::before {
