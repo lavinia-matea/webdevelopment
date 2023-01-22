@@ -32,7 +32,7 @@ wavesurfer.on('finish', function() {
 
 // Text Typing Animation
 let typed = new Typed(".auto-type", {
-    strings: [ "Lavinia" ,"Coding", "Sleeping", "Eating"],
+    strings: [ "Lavinia" ,"Researching", "Coding", "Sleeping", "Eating"],
     typeSpeed: 80,
     backSpeed: 80,
     loop: true
@@ -48,11 +48,7 @@ menu.onclick = () => {
 }
 
 // Contact Form
-function addClass() {
-    document.body.classList.add("sent");
-  }
-  
-  sendLetter.addEventListener("click", addClass);
+
 
 
 
@@ -66,11 +62,8 @@ const sunIcon = document.querySelector(".toggle .bxs-sun");
 const moonIcon = document.querySelector(".toggle .bx-moon");
 
 toggle.addEventListener("change", () => {
-    
     body.classList.toggle("dark");
     sunIcon.className = sunIcon.className == "bx bxs-sun" ? "bx bx-sun" : "bx bxs-sun";
     moonIcon.className = moonIcon.className == "bx bxs-moon" ? "bx bx-moon" : "bx bxs-moon";
-
 });
-
 

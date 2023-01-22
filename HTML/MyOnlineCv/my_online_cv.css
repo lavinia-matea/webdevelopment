@@ -13,7 +13,7 @@
 :root {
   --main-color: #51a3e6;
   --bg-color: #fff;
-  --text-color: #000000;
+  --text-color: #615f5f;
   --hover: #ff006c;
 
   --big-font: 3.2rem;
@@ -62,13 +62,21 @@ body {
 
 /* -- Toggle --*/
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 .toggle {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   cursor: pointer;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   width: 120px;
   height: 60px;
   border-radius: 50px;
@@ -78,7 +86,7 @@ body {
 .toggle i {
   width: 50%;
   line-height: 60px;
-  text-align: center;
+  text-align:center;
   font-size: 30px;
   z-index: 1;
 }
@@ -96,9 +104,26 @@ input {
   display: none;
 }
 
+.toggle {
+  background: linear-gradient(145deg, #e1e1e1, #fff);
+  box-shadow: 3px 3px 4px #e6e6e6,
+    -3px -3px 4px #ffffff;
+}
+
+.toggle .bxs-sun {
+  color: #fafafa;
+}
+
+.toggle .bx-moon {
+  color: #151d2a;
+}
+
+.toggle .ball {
+  background: #151d2a;
+}
 
 /*
-  -- Dark Mode --
+-- Dark Mode --
 */
 
 .dark {
@@ -108,7 +133,7 @@ input {
 .dark .toggle {
   background: #151d2a;
   box-shadow: 3px 3px 3px #0e131b,
-              -3px -3px 3px #1c2739;
+    -3px -3px 3px #1c2739;
 }
 
 .dark .toggle .bx-sun {
@@ -123,12 +148,6 @@ input {
   background: #fafafa;
   transform: translateX(60px);
 }
-
-
-
-
-
-
 
 
 
@@ -286,10 +305,6 @@ div#menubar > a:hover {
   width: 80%;
   border-radius: 40px;
 }
-
-.about-img img:hover {
-}
-
 .about-text p {
   font-size: var(--p-font);
   font-weight: 500;
@@ -301,13 +316,13 @@ div#menubar > a:hover {
 /* --- Glowing Bowls Animation ---*/
 
 .bowls_section{
-  margin: 0;
-  padding: 0;
+  margin: 30;
+  padding: 30;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 25vh;
-  background: #121212;
+  background: #151d2a;
   border-radius: 20%;
   width: 30vh;
 }
@@ -658,6 +673,88 @@ box-shadow: 0 10px #222;
 }
 
 /* -- Contact Form -- */
+
+
+
+.hero_form {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7), #3551b5 );
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+}
+
+.input-group {
+  margin-bottom: 30px;
+  position: relative;
+
+}
+
+.input, textarea{
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 3px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 15px;
+
+}
+
+.label_form {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+  transition: 0.2s;
+
+}
+
+.send_btn{
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+
+}
+
+.input:focus~.label_form,
+.input:valid~.label_form,
+textarea:focus~.label_form,
+textarea:valid~.label_form {
+top: -35px;
+font-size: 14px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .input-group {
+flex-basis: 48%;
+
+}
+
+
 
 
 

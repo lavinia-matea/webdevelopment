@@ -19,51 +19,42 @@
         <!--JavaScript File -->
         <link rel="javascript" href="./my_online_cv.js" />
     <!--icon CDN link -->
-    <link
-      rel="stylesheet"
-      href="https://cds.jsdelivr.net/npm/boxicon@2.1.2/css/boxicons.min.css"
-    />
+    <link rel="stylesheet"href="https://cds.jsdelivr.net/npm/boxicon@2.1.2/css/boxicons.min.css"/>
+      <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <!-- Audio File -->
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://kit.fontawesome.com/c33a7fbce2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"></script>
   </head>
-  <body class="light">
-   
-
-      <input type="checkbox" id="toggle">
-  
-      <label class="toggle" for="toggle">
-          <i class="bx bxs-sun"></i>
-          <i class="bx bxs-moon"></i>
-          <span class="ball"></span>
-      </label>
-  
-  
-    <!-- Navigation Bar-->
-    <header>
-      <!-- Logo -->
+  <body>
     
-      <a href="" class="logo"> <img class="logo-img"src="./images/fav_icon.png"> Lavinia Matea</a>
+    <header>
+
+
+      <!-- Toggle -->
+      <input type="checkbox" id="toggle">
+
+      <label class="toggle" for="toggle">
+        <i class="bx bxs-sun"></i>
+        <i class="bx bx-moon"></i>
+        <span class="ball"></span>
+      </label>
+    
+      <a href="#main_page" class="logo"> <img class="logo-img"src="./images/fav_icon.png"> Lavinia Matea</a>
       <!-- Button For Responsive Device-->
       <div class="bx bx-menu" id="menu-icon"></div>
       <!-- Menu Items -->
+  
       <div id='menubar'>
+     
         <a href='#main_page'>Home</a> <a href='#about_me'>About Me</a>
         <a href='#skills'>Skills</a> <a href='#portfolio'>Portfolio</a>
         <a href='#services'>Hobbies</a> <a href='#contact'>Contact</a>    
           
-
-   
-    
-
     </header>
    
-      <!-- Dark Mode  Button-->
-    <label class="toggle" for="toggle">
-      <i class="bx bxs-sun"></i>
-      <i class="bx bx-moon"></i>
-      <span class="ball"></span>
-    </label>
+  
 
     <!-- Home Section-->
     <section class="home" id="home">
@@ -315,8 +306,34 @@
 
     <!-- Contact Form-->
 
-      
+    <div class="body_hero">
+      <div class="hero_form">
+        <form>
+          <div class="row"><div class="input-group">
+             <input class="input" type="text" id="name"required>
+          <label class="label_form" for="name"><i class="fas fa-user"></i>Your Name:</label>
+          </div>
+          <div class="input-group">
+            <input class="input" type="text" id="number"required>
+         <label class="label_form" for="number"><i class="fas fa-phone-square-alt"></i>Phone Number</label>
+         </div>
+        </div>
+          
+         <div class="input-group">
+          <input class="input" type="email" id="email"required>
+       <label class="label_form"for="email"><i class="fas fa-envelope"></i>Your E-mail Address:</label>
+       </div>
+       <div class="input-group">
+        <textarea id="message" rows="8" required></textarea>
+     <label class="label_form"for="message"><i class="fas fa-comments"></i>Your Message:</label>
+     </div>
+     <button class="send_btn" type="submit">SEND<i class="fas fa-paper-plane"></i></button>
+         
+        </form>
 
+      </div>
+    </div>
+  
 
 
 
@@ -325,7 +342,7 @@
 
     <!-- Footer Section -->
 
-    <div class="follow">You can also find me on:</div>
+    <div class="follow">YOU CAN ALSO FIND ME ON:</div>
 <section class="footer_section">
   <div class="color"></div>
   <div class="color"></div>
